@@ -14,7 +14,7 @@ class SaveResponseAction extends AbstractSoapUIAction<HttpRequestTestStep>
 {
     public SaveResponseAction()
     {
-        super( "Save Response <Samy>", "Saves recent response to a file" );
+        super( "Export Request and Response", "Saves recent response to a file" );
     }
 
 

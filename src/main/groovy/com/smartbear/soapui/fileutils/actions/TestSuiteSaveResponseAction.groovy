@@ -13,7 +13,7 @@ class TestSuiteSaveResponseAction extends AbstractSoapUIAction<TestSuite>
 {
     public TestSuiteSaveResponseAction()
     {
-        super("Export Request & Response", "Saves recent responses of underlying TestSteps's to a file")
+        super("Export Request and Response", "Saves recent responses of underlying TestSteps's to a file")
     }
     @Override
     void perform(TestSuite testSuite, Object o)

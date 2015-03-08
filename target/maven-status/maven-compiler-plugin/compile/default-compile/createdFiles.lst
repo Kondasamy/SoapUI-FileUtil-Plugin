@@ -1,4 +1,4 @@
-com\smartbear\soapui\fileutils\actions\TestCaseSaveResponseAction.class
 com\smartbear\soapui\fileutils\actions\ProjectSaveResponseAction.class
+com\smartbear\soapui\fileutils\actions\TestCaseSaveResponseAction.class
 com\smartbear\soapui\fileutils\actions\SaveResponseAction.class
 com\smartbear\soapui\fileutils\actions\TestSuiteSaveResponseAction.class
