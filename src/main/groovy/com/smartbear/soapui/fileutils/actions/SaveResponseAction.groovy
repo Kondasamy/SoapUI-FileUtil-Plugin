@@ -7,12 +7,11 @@ package com.smartbear.soapui.fileutils.actions
 
 import com.eviware.soapui.SoapUI
 import com.eviware.soapui.impl.support.http.HttpRequestTestStep
-import com.eviware.soapui.support.Tools
 import com.eviware.soapui.support.UISupport
 import com.eviware.soapui.support.action.support.AbstractSoapUIAction
 
-class SaveResponseAction extends AbstractSoapUIAction<HttpRequestTestStep>{
-
+class SaveResponseAction extends AbstractSoapUIAction<HttpRequestTestStep>
+{
     public SaveResponseAction()
     {
         super( "Save Response <Samy>", "Saves recent response to a file" );
@@ -33,8 +32,7 @@ class SaveResponseAction extends AbstractSoapUIAction<HttpRequestTestStep>{
         /*Check if null response returned post successful run of the teststep*/
         def data = response.rawResponseData
 //        def data1 = httpTestRequestStep.httpRequest.getResponse().getContentAsXml()
-        def rawRequest = new String(httpTestRequestStep.httpRequest.response.getRawRequestData(),"UTF-8")
-        def rawResponse = new String(httpTestRequestStep.httpRequest.response.getRawResponseData(),"UTF-8")
+
         if( data == null || data.length == 0 )
         {
             UISupport.showInfoMessage( "Empty Response data for TestStep" );
@@ -43,6 +41,8 @@ class SaveResponseAction extends AbstractSoapUIAction<HttpRequestTestStep>{
         /*If the data is available, save to a file in User's current directory*/
         else
         {
+            def rawRequest = new String(httpTestRequestStep.httpRequest.response.getRawRequestData(),"UTF-8")
+            def rawResponse = new String(httpTestRequestStep.httpRequest.response.getRawResponseData(),"UTF-8")
             def today= new Date() //represents the date and time when it is created
             //SoapUI.log today.format("yyyyMMdd-HH:mm:ss")
             String today1 = today.format("yyyyMMdd-HH:mm:ss")
@@ -75,20 +75,24 @@ class SaveResponseAction extends AbstractSoapUIAction<HttpRequestTestStep>{
             {
                 def file = new File(SubDir1,fileName6)
                 if(!file.exists())
-                    file.append "Raw Request:" + System.getProperty("line.separator") + "Oper 1" + rawRequest+System.getProperty("line.separator")+System.getProperty("line.separator") + "Raw Response"+ System.getProperty("line.separator")+ rawResponse
+                    file.append "Raw Request:" + System.getProperty("line.separator") + rawRequest+System.getProperty("line.separator")+System.getProperty("line.separator") + "Raw Response"+ System.getProperty("line.separator")+ rawResponse
                 else
-                    file << "Raw Request:" + System.getProperty("line.separator") + "Oper 2" + rawRequest+System.getProperty("line.separator")+System.getProperty("line.separator") + "Raw Response"+ System.getProperty("line.separator")+ rawResponse
+                    file << "Raw Request:" + System.getProperty("line.separator") +  rawRequest+System.getProperty("line.separator")+System.getProperty("line.separator") + "Raw Response"+ System.getProperty("line.separator")+ rawResponse
             }
             else
             {
                 SubDir1.mkdirs()
                 def file = new File(SubDir1,fileName6)
-                file << "Raw Request:" + System.getProperty("line.separator") + "Oper 3" + rawRequest+System.getProperty("line.separator")+System.getProperty("line.separator") + "Raw Response"+ System.getProperty("line.separator")+ rawResponse
+                file << "Raw Request:" + System.getProperty("line.separator") + rawRequest+System.getProperty("line.separator")+System.getProperty("line.separator") + "Raw Response"+ System.getProperty("line.separator")+ rawResponse
             }
             SoapUI.log.info "Raw Request and Raw Response is exported to a file :: "+mainDir+ SubDir+"\\"+fileName6
-            UISupport.showInfoMessage("File Successfully saved!!","Success!!!")
+            UISupport.showInfoMessage("File Successfully saved!! Please see the SoapUI log for more information!","File Export Success!!!")
 
 
         }
     }
 }
+/**
+ * Created by Kondasamy J
+ * Contact: Kondasamy.J@outlook.com
+ */

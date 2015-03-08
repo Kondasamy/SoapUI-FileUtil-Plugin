@@ -2,6 +2,8 @@
 <tns:soapui-actions xmlns:tns="http://eviware.com/soapui/config">
 
     <tns:action id="SaveResponseAction" actionClass="com.smartbear.soapui.fileutils.actions.SaveResponseAction"/>
+    <tns:action id="TestCaseSaveResponseAction" actionClass="com.smartbear.soapui.fileutils.actions.TestCaseSaveResponseAction"/>
+    <tns:action id="TestSuiteSaveResponseAction" actionClass="com.smartbear.soapui.fileutils.actions.TestSuiteSaveResponseAction"/>
 
     <tns:actionGroup id="RestTestRequestStepActions">
         <tns:actionMapping actionId="SaveResponseAction" position="BEFORE" positionRef="RenameTestCaseAction"/>
@@ -17,6 +19,18 @@
 
     <tns:actionGroup id="WsdlTestCaseActions">
         <tns:actionMapping actionId="TestCaseSaveResponseAction"/>
+    </tns:actionGroup>
+
+    <tns:actionGroup id="TestCaseActions">
+        <tns:actionMapping actionId="TestCaseSaveResponseAction"/>
+    </tns:actionGroup>
+
+    <tns:actionGroup id="WsdlTestSuiteActions">
+        <tns:actionMapping actionId="TestSuiteSaveResponseAction"/>
+    </tns:actionGroup>
+
+    <tns:actionGroup id="TestSuiteActions">
+        <tns:actionMapping actionId="TestSuiteSaveResponseAction"/>
     </tns:actionGroup>
 
 </tns:soapui-actions>
