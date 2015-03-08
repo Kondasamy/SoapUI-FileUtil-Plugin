@@ -4,6 +4,7 @@
     <tns:action id="SaveResponseAction" actionClass="com.smartbear.soapui.fileutils.actions.SaveResponseAction"/>
     <tns:action id="TestCaseSaveResponseAction" actionClass="com.smartbear.soapui.fileutils.actions.TestCaseSaveResponseAction"/>
     <tns:action id="TestSuiteSaveResponseAction" actionClass="com.smartbear.soapui.fileutils.actions.TestSuiteSaveResponseAction"/>
+    <tns:action id="ProjectSaveResponseAction" actionClass="com.smartbear.soapui.fileutils.actions.ProjectSaveResponseAction"/>
 
     <tns:actionGroup id="RestTestRequestStepActions">
         <tns:actionMapping actionId="SaveResponseAction" position="BEFORE" positionRef="RenameTestCaseAction"/>
@@ -31,6 +32,14 @@
 
     <tns:actionGroup id="TestSuiteActions">
         <tns:actionMapping actionId="TestSuiteSaveResponseAction"/>
+    </tns:actionGroup>
+
+    <tns:actionGroup id="ProjectActions">
+        <tns:actionMapping actionId="ProjectSaveResponseAction"/>
+    </tns:actionGroup>
+
+    <tns:actionGroup id="WsdlProjectActions">
+        <tns:actionMapping actionId="ProjectSaveResponseAction"/>
     </tns:actionGroup>
 
 </tns:soapui-actions>
