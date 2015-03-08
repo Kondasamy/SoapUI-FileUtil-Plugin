@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c4b08d9-5c45-48c1-8435-a26eddc3d51b" name="Default" comment="Added TestCase and TestSuite Actions">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/actions.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/actions.xml" />
-    </list>
+    <list default="true" id="2c4b08d9-5c45-48c1-8435-a26eddc3d51b" name="Default" comment="Added TestCase and TestSuite Actions" />
     <list id="6f1628c7-b2b8-48ce-a578-ccc17632c064" name="Rejected commit: Default" comment="" />
     <list id="3230e07e-a2ad-4657-be33-2598176bfa25" name="Added TestCase and TestSuite Actions" comment="Added TestCase and TestSuite Actions" />
     <ignored path="soapui-fileutils-plugin.iws" />
@@ -69,8 +67,8 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.5380952" vertical-offset="918" max-vertical-offset="3230">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state vertical-scroll-proportion="2.8738096" vertical-offset="0" max-vertical-offset="3230">
+              <caret line="71" column="21" selection-start-line="71" selection-start-column="21" selection-end-line="71" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -480,12 +478,12 @@
       <workItem from="1425746789645" duration="8243000" />
       <workItem from="1425787952972" duration="608000" />
       <workItem from="1425788692479" duration="23608000" />
-      <workItem from="1425825880366" duration="314000" />
+      <workItem from="1425825880366" duration="369000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51339000" />
+    <option name="totallyTimeSpent" value="51394000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
@@ -728,8 +726,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.5380952" vertical-offset="918" max-vertical-offset="3230">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state vertical-scroll-proportion="2.8738096" vertical-offset="0" max-vertical-offset="3230">
+          <caret line="71" column="21" selection-start-line="71" selection-start-column="21" selection-end-line="71" selection-end-column="21" />
           <folding />
         </state>
       </provider>
