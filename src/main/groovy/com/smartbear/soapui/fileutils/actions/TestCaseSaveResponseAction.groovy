@@ -13,7 +13,7 @@ class TestCaseSaveResponseAction extends AbstractSoapUIAction<TestCase>
 {
     public TestCaseSaveResponseAction()
     {
-        super("Save Response <Samy>", "Saves recent response of TestSteps's to a file")
+        super("Export Request & Response", "Saves recent response of underlying TestSteps's to a file")
     }
     @Override
     void perform(TestCase testCase, Object o)
@@ -24,13 +24,13 @@ class TestCaseSaveResponseAction extends AbstractSoapUIAction<TestCase>
                         def response = tests.httpRequest.response
                         if( response == null )
                         {
-                            SoapUI.log.info "Missing Response for TestStep : " +tests.name
+                            SoapUI.log.info "Missing Response for TestStep : " + tests.testStep.testCase.testSuite.name + "=>"+tests.testStep.testCase.name+ "->"+tests.name
                             return
                         }
                         def data = response.getRawResponseData()
                         if( data == null || data.length == 0 )
                         {
-                            SoapUI.log.info "Empty Response data for TestStep : "+tests.name
+                            SoapUI.log.info "Empty Response data for TestStep : "+ tests.testStep.testCase.testSuite.name + "=>"+tests.testStep.testCase.name+ "->"+tests.name
                             return
                         }
                         else
@@ -62,15 +62,15 @@ class TestCaseSaveResponseAction extends AbstractSoapUIAction<TestCase>
                             {
                                 def file = new File(SubDir1,fileName6)
                                 if(!file.exists())
-                                    file.append "Raw Request:" + System.getProperty("line.separator") + "Oper 1" + rawRequest+System.getProperty("line.separator")+System.getProperty("line.separator") + "Raw Response"+ System.getProperty("line.separator")+ rawResponse
+                                    file.append "Raw Request:" + System.getProperty("line.separator") + rawRequest+System.getProperty("line.separator")+System.getProperty("line.separator") + "Raw Response"+ System.getProperty("line.separator")+ rawResponse
                                 else
-                                    file << "Raw Request:" + System.getProperty("line.separator") + "Oper 2" + rawRequest+System.getProperty("line.separator")+System.getProperty("line.separator") + "Raw Response"+ System.getProperty("line.separator")+ rawResponse
+                                    file << "Raw Request:" + System.getProperty("line.separator") +  rawRequest+System.getProperty("line.separator")+System.getProperty("line.separator") + "Raw Response"+ System.getProperty("line.separator")+ rawResponse
                             }
                             else
                             {
                                 SubDir1.mkdirs()
                                 def file = new File(SubDir1,fileName6)
-                                file << "Raw Request:" + System.getProperty("line.separator") + "Oper 3" + rawRequest+System.getProperty("line.separator")+System.getProperty("line.separator") + "Raw Response"+ System.getProperty("line.separator")+ rawResponse
+                                file << "Raw Request:" + System.getProperty("line.separator") +  rawRequest+System.getProperty("line.separator")+System.getProperty("line.separator") + "Raw Response"+ System.getProperty("line.separator")+ rawResponse
                             }
                             SoapUI.log.info "Raw Request and Raw Response is exported to a file :: "+mainDir+ SubDir+"\\"+fileName6
 
@@ -83,13 +83,13 @@ class TestCaseSaveResponseAction extends AbstractSoapUIAction<TestCase>
                         def response = tests.httpRequest.response
                         if( response == null )
                         {
-                            SoapUI.log.info "Missing Response for TestStep : " +tests.name
+                            SoapUI.log.info "Missing Response for TestStep : " +tests.testStep.testCase.testSuite.name + "=>"+tests.testStep.testCase.name+ "->"+tests.name
                             return
                         }
                         def data = response.getRawResponseData()
                         if( data == null || data.length == 0 )
                         {
-                            SoapUI.log.info "Empty Response data for TestStep : "+tests.name
+                            SoapUI.log.info "Empty Response data for TestStep : "+ tests.testStep.testCase.testSuite.name + "=>"+tests.testStep.testCase.name+ "->"+tests.name
                             return
                         }
                         else
