@@ -34,6 +34,10 @@
         <tns:actionMapping actionId="TestSuiteSaveResponseAction"/>
     </tns:actionGroup>
 
+    <tns:actionGroup id="EnabledWsdlProjectActions">
+        <tns:actionMapping actionId="ProjectSaveResponseAction"/>
+    </tns:actionGroup>
+
     <tns:actionGroup id="WsdlProjectActions">
         <tns:actionMapping actionId="ProjectSaveResponseAction"/>
     </tns:actionGroup>
