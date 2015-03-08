@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:soapui-actions xmlns:tns="http://eviware.com/soapui/config">
+
+    <tns:action id="SaveResponseAction" actionClass="com.smartbear.soapui.fileutils.actions.SaveResponseAction"/>
+
+    <tns:actionGroup id="RestTestRequestStepActions">
+        <tns:actionMapping actionId="SaveResponseAction"/>
+    </tns:actionGroup>
+
+    <tns:actionGroup id="HttpTestRequestStepActions">
+        <tns:actionMapping actionId="SaveResponseAction" position="BEFORE"/>
+    </tns:actionGroup>
+
+    <tns:actionGroup id="WsdlTestRequestStepActions">
+        <tns:actionMapping actionId="SaveResponseAction"/>
+    </tns:actionGroup>
+
+</tns:soapui-actions>
