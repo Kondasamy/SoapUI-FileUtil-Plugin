@@ -15,4 +15,12 @@
         <tns:actionMapping actionId="SaveResponseAction"/>
     </tns:actionGroup>
 
+    <tns:actionGroup id="TestCaseActions">
+        <tns:actionMapping actionId="TestCaseSaveResponseAction"/>
+    </tns:actionGroup>
+
+    <tns:actionGroup id="WsdlTestCaseActions">
+        <tns:actionMapping actionId="TestCaseSaveResponseAction"/>
+    </tns:actionGroup>
+
 </tns:soapui-actions>
